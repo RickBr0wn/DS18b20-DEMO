@@ -1,2 +1,2 @@
-# DS18b20-DEMO
-DS18b20 Temperature Sensor and Real Time Dials
+# Demonstration of Johnny-Five, Express.js & Sockets.io
+Demonstration of Johnny-Five, Express.js & Sockets.io
