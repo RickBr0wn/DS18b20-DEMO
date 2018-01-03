@@ -28,14 +28,6 @@ board.on("ready", function() {
     pin: 2
   });
 
-  let servo = new five.Servo(10);
-
-  this.repl.inject({
-    servo: servo
-  });
-
-  servo.write(90);
-
   // On.change
   thermometer.on("change", function() {
     // Prints data to 'server' console

@@ -1,16 +1,32 @@
 {
-  "name": "ds18b20-demo",
+  "name": "johnny5-socket.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "Basic code, to demonstrate Johnny Five & Socket.io functioning together",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Rick Brown",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
     "johnny-five": "^0.12.0",
     "socket.io": "^2.0.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RickBr0wn/johnnyFive-sockets.io.git"
+  },
+  "keywords": [
+    "Johnny",
+    "Five",
+    "Sockets.io",
+    "Node.js",
+    "Javascript"
+  ],
+  "bugs": {
+    "url": "https://github.com/RickBr0wn/johnnyFive-sockets.io/issues"
+  },
+  "homepage": "https://github.com/RickBr0wn/johnnyFive-sockets.io#readme"
 }
