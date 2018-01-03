@@ -4,63 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>DS18b20 DEMO</title>
-  <script src="./asssets/justgage.js"></script>
-  <script src="./asssets/raphael-2.1.4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <title>Basic Template for Johnny Five, Express.js and Sockets.io</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script> <!-- include the sockets.io CDN -->
 </head>
 <body>
-  Temps
-  <div id="gauge1" class="200x160px" style="width:400px; height:320px; float: left; display: block"></div>
-  <div id="gauge2" class="200x160px" style="width:400px; height:320px; float: left; display: block"></div>
-  <div id="gauge3" class="200x160px" style="width:400px; height:320px; float: left; display: block"></div>
+  <!-- Start of 'client-side' javascript -->
   <script>
     let socket = io();
-    let temp = 20;
-    let temp2 = 10;
 
+    // When data is 'recieved' do something
     socket.on('data', function(val){
-      temp = val;
-      temp2 = val+20;
-      temp3 = val+40;
-      console.log(temp2);
+      console.log(val);
     });
-
-    var gauge1 = new JustGage({
-        id: "gauge1",
-        value: temp,
-        decimals: 2,
-        min: 0,
-        max: 50,
-        title: "Sensor #1",
-        label: "Celsius"
-      });
-
-      var gauge2 = new JustGage({
-        id: "gauge2",
-        value: temp2,
-        decimals: 2,
-        min: 0,
-        max: 150,
-        title: "Sensor #2",
-        label: "Celsius"
-      });
-
-      var gauge3 = new JustGage({
-        id: "gauge3",
-        value: temp3,
-        decimals: 2,
-        min: 0,
-        max: 50,
-        title: "Sensor #3",
-        label: "Celsius"
-      });
-
-    setInterval(function(){
-      gauge1.refresh(temp);
-      gauge2.refresh(temp2);
-      gauge3.refresh(temp3);
-    }, 1000);
 
   </script>
 </body>
