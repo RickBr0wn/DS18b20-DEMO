@@ -33,7 +33,6 @@ board.on("ready", function() {
   thermometer.on("change", function() {
     //Prints data to 'server' console
     console.log(this.celsius + "°C");
-    //console.log("0x" + this.address.toString(16));
 
   // Send data via sockets.io
   io.emit('data', this.celsius);
