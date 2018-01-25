@@ -5,7 +5,7 @@ let io = require('socket.io');
 let five = require("johnny-five");
 
 // Create board instance
-let board = new five.Board();
+let board = new five.Board({ port: "COM3" });
 // Create app instance
 let app = new express();
 
